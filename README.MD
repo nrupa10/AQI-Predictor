@@ -1,105 +1,184 @@
 # 🌍 Air Quality Prediction System
 
-A professional, production-ready Streamlit web application for predicting Air Quality Index (AQI) using Machine Learning.
-
----
-
-## 🎯 Overview
-
-This project demonstrates the application of Machine Learning to predict air quality levels based on pollutant measurements. It features a modern dashboard with interactive visualizations, real-time predictions, and health recommendations.
+A Machine Learning powered web application that predicts the **Air Quality Index (AQI)** using pollutant concentration data. Built with **Python**, **Streamlit**, **Scikit-learn**, and **Plotly**, the application provides real-time AQI predictions, interactive visualizations, and health recommendations.
 
 ---
 
 ## ✨ Features
 
-- **Modern Dashboard** — Glassmorphism UI with full-screen Earth background
-- **Real-time Predictions** — Predict AQI from 12 pollutant parameters
-- **Interactive Gauge** — Semicircular speedometer showing AQI levels with color coding
-- **Health Recommendations** — Contextual health advice based on predicted AQI
-- **AQI Scale Reference** — Built-in reference card for all 6 AQI categories
-- **Input Validation** — Prevents prediction on empty/zero inputs
-- **Responsive Design** — Works seamlessly on desktop and mobile devices
+* Predict AQI using **12 air pollutant parameters**
+* Interactive AQI speedometer gauge
+* Health recommendations based on predicted AQI
+* Modern Glassmorphism user interface
+* AQI category reference with color coding
+* Input validation to prevent invalid predictions
+* Responsive design for desktop and mobile devices
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technical Implementation
 
-| Tool | Purpose |
-|------|---------|
-| Python | Core programming language |
-| Streamlit | Web application framework |
-| Scikit-Learn | Machine learning (Random Forest Regressor) |
-| Plotly | Interactive speedometer gauge |
-| Pandas | Data processing and feature engineering |
+* Machine Learning model trained using **Random Forest Regressor**
+* Built with **Python** and **Streamlit**
+* Interactive visualizations using **Plotly**
+* Data preprocessing using **Pandas**
+* Model serialization using **Pickle (.pkl)**
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```
 AQI-Predictor/
-├── app.py              # Main Streamlit application
-├── components.py       # UI components (gauge, cards, tips)
-├── styles.py           # CSS styling and theming
-├── config.py           # App configuration and AQI categories
-├── utils.py            # Helper functions (colors, categories)
-├── data_loader.py      # Dataset loading and preprocessing
-├── data/
-│   └── city_day.csv    # India city-day AQI dataset (Kaggle)
+│
+├── app.py                    # Main Streamlit application
+├── components.py             # UI components
+├── styles.py                 # CSS styling
+├── config.py                 # AQI categories & configuration
+├── utils.py                  # Helper functions
+├── data_loader.py            # Dataset preprocessing
+│
 ├── models/
-│   └── aqi_model.pkl   # Trained Random Forest model
-├── earth_image.jpg     # Background image
-├── requirements.txt    # Python dependencies
+│   └── aqi_model.pkl         # Trained ML model
+│
+├── data/
+│   └── city_day.csv          # AQI dataset
+│
+├── earth_image.jpg           # Background image
+├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## 🚀 How to Run
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/AQI-Predictor.git
+git clone https://github.com/your-username/AQI-Predictor.git
+```
+
+### 2. Navigate to the Project
+
+```bash
 cd AQI-Predictor
+```
 
-# 2. Install dependencies
+### 3. Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-# 3. Run the app
+### 4. Run the Application
+
+```bash
 streamlit run app.py
 ```
 
 ---
 
-## 📊 Model Details
+## 📊 Machine Learning Model
 
-- **Algorithm** — Random Forest Regressor
-- **Training Data** — Kaggle India City Day AQI Dataset
-- **Features** — PM2.5, PM10, NO, NO₂, NOx, NH₃, CO, SO₂, O₃, Benzene, Toluene, Xylene
-- **Target** — AQI (Air Quality Index)
-- **Split** — 80% train / 20% test, random_state=42
+The prediction model is trained using the **Random Forest Regressor** algorithm on the **India Air Quality Dataset (2015–2020)**.
+
+### Input Features
+
+* PM2.5
+* PM10
+* NO
+* NO₂
+* NOx
+* NH₃
+* CO
+* SO₂
+* O₃
+* Benzene
+* Toluene
+* Xylene
+
+### Target
+
+* Air Quality Index (AQI)
+
+### Dataset
+
+* India Air Quality Dataset (2015–2020)
+* Missing values handled during preprocessing
+* 80% Training
+* 20% Testing
 
 ---
 
-## 🏥 AQI Categories
+## 📈 AQI Categories
 
-| Range | Category | Health Impact |
-|-------|----------|--------------|
-| 0–50 | 🟢 Good | Minimal impact |
-| 51–100 | 🟡 Satisfactory | Minor breathing discomfort |
-| 101–200 | 🟠 Moderate | Breathing discomfort for sensitive people |
-| 201–300 | 🔴 Poor | Breathing discomfort for most |
-| 301–400 | 🟣 Very Poor | Respiratory illness on prolonged exposure |
-| 401–500 | 🟤 Severe | Serious health effects for everyone |
+| AQI     | Category        |
+| ------- | --------------- |
+| 0–50    | 🟢 Good         |
+| 51–100  | 🟡 Satisfactory |
+| 101–200 | 🟠 Moderate     |
+| 201–300 | 🔴 Poor         |
+| 301–400 | 🟣 Very Poor    |
+| 401–500 | 🟤 Severe       |
+
+---
+
+## 💡 Application Workflow
+
+1. User enters pollutant concentration values.
+2. Input data is validated.
+3. The trained Random Forest model predicts AQI.
+4. AQI category is determined.
+5. Interactive gauge displays the AQI.
+6. Health recommendations are shown based on the prediction.
+
+---
+
+## 📸 Screenshots
+
+### Home Page
+
+(Add Screenshot Here)
+
+### Prediction Result
+
+(Add Screenshot Here)
+
+### AQI Reference
+
+(Add Screenshot Here)
+
+---
+
+## 📦 Dependencies
+
+* Python
+* Streamlit
+* Pandas
+* NumPy
+* Scikit-learn
+* Plotly
+* Joblib / Pickle
+
+Install using:
+
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
 ## 📌 Notes
 
-- Dataset sourced from [Kaggle — Air Quality Data in India](https://www.kaggle.com/datasets/rohanrao/air-quality-data-in-india)
-- For informational purposes only — always consult official monitoring stations for critical decisions
-- India NAAQS standards followed for AQI categorisation
+* Dataset sourced from the **India Air Quality Dataset (2015–2020)**.
+* This project is intended for educational and demonstration purposes.
+* Actual AQI values should always be verified using official environmental monitoring agencies.
 
 ---
 
-*Built as part of a college ML project.*
+## 👨‍💻 Author
+
+**Mohana Rupa**
+
+Machine Learning | Python | Data Science
