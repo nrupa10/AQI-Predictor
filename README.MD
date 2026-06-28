@@ -145,7 +145,7 @@ The prediction model is trained using the **Random Forest Regressor** algorithm 
 * Joblib / Pickle
 
 Install using:
-
+---
 ```bash
 python -m pip install -r requirements.txt```
 
