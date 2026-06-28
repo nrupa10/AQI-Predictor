@@ -1,10 +1,10 @@
-# 🌍 Air Quality Prediction System
+# Air Quality Prediction System
 
 A Machine Learning powered web application that predicts the **Air Quality Index (AQI)** using pollutant concentration data. Built with **Python**, **Streamlit**, **Scikit-learn**, and **Plotly**, the application provides real-time AQI predictions, interactive visualizations, and health recommendations.
 
 ---
 
-Features
+## Features
 
 * Predict AQI using **12 air pollutant parameters**
 * Interactive AQI speedometer gauge
@@ -16,7 +16,7 @@ Features
 
 ---
 
-Technical Implementation
+## Technical Implementation
 
 * Machine Learning model trained using **Random Forest Regressor**
 * Built with **Python** and **Streamlit**
@@ -26,7 +26,7 @@ Technical Implementation
 
 ---
 
-Project Structure
+## Project Structure
 
 ```
 AQI-Predictor/
@@ -51,15 +51,15 @@ AQI-Predictor/
 
 ---
 
-Getting Started
+## Getting Started
 
-1. Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/AQI-Predictor.git
 ```
 
-2. Navigate to the Project
+### 2. Navigate to the Project
 
 ```bash
 cd AQI-Predictor
@@ -79,7 +79,7 @@ streamlit run app.py
 
 ---
 
- Machine Learning Model
+## Machine Learning Model
 
 The prediction model is trained using the **Random Forest Regressor** algorithm on the **India Air Quality Dataset (2015–2020)**.
 
@@ -111,7 +111,7 @@ The prediction model is trained using the **Random Forest Regressor** algorithm 
 
 ---
 
-AQI Categories
+## AQI Categories
 
 | AQI     | Category        |
 | ------- | --------------- |
@@ -124,7 +124,7 @@ AQI Categories
 
 ---
 
- Application Workflow
+## Application Workflow
 
 1. User enters pollutant concentration values.
 2. Input data is validated.
@@ -133,8 +133,8 @@ AQI Categories
 5. Interactive gauge displays the AQI.
 6. Health recommendations are shown based on the prediction.
 
----
-Dependencies
+
+## Dependencies
 
 * Python
 * Streamlit
@@ -147,16 +147,14 @@ Dependencies
 Install using:
 
 ```bash
-pip install -r requirements.txt
-```
+python -m pip install -r requirements.txt```
 
 ---
 
-Notes
+## Notes
 
 * Dataset sourced from the **India Air Quality Dataset (2015–2020)**.
 * This project is intended for educational and demonstration purposes.
 * Actual AQI values should always be verified using official environmental monitoring agencies.
 
----
-Machine Learning | Python | Data Science
+Machine Learning | Python
